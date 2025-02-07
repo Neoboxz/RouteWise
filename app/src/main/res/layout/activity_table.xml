@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".TableActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="16dp"
+            android:stretchColumns="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Calculate your own vehicle emission"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/openCameraButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/round_button"
+            android:text="Open Camera"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/vehicleName"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:text="Take a photo of your vehicle"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/example"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:text="Example of the photo to take"
+            android:textColor="#000" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            />
+
+        <TextView
+            android:id="@+id/vehicleMetrics"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/selectedImageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/_017_toyota_hiace__trh201r__lwb_van__2018_10_01__01"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/metricsIcon"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/treeicon" />
+
+            <ImageView
+
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="55dp"
+                android:background="@drawable/water_drop"
+                android:gravity="center" />
+
+            <ImageView
+
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0dp"
+                android:background="@drawable/co2"
+                android:gravity="center" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/metrics"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tree"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:gravity="center"
+                android:text="Trees to plant:"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/water"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Water to produce:"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/totalco2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Total Emission:"
+                android:textColor="#000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/metricsIcon2"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/smoke" />
+
+            <ImageView
+
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/carbon_offsets"
+                android:gravity="center" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/metrics2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+           >
+
+            <TextView
+                android:id="@+id/carbonCredit"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Total Carbon Credit:"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="Total cost to offset:"
+                android:textColor="#000" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/setQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Enter number of trips:"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter number of trips"
+                android:inputType="number"
+                android:text="1"
+                />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnBackToMap"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_button"
+            android:text="Back to Map"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
